@@ -1,0 +1,21 @@
+[Desktop Entry]
+Categories=Application;Office;
+Comment[en_US]=GUTL Application example
+Comment=GUTL Application example
+Exec=/usr/bin/gutl
+GenericName[en_US]=
+GenericName=
+Icon=gutl
+MimeType=
+Name[en_US]=GUTL
+Name=GUTL
+Path=/usr/bin
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=1.0
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

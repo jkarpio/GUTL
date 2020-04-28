@@ -1,0 +1,6 @@
+?package(gutl):needs="X11" section="Applications/Data Management" \
+  title="GUTL" command="/usr/bin/gutl" \
+  longtitle="GUTL" \
+  description="Point of Sale Management" \
+  icon="/usr/icons/hicolor/48x48/gutl.png"
+  
