@@ -9,7 +9,7 @@ Ejemplo de app multiplatarforma usando mono y gtk.
 
 ## Requerimientos
 
-- Mono 5+ o .net 4.5.2.
+- Mono 6.x o superior
 - Powershell Core 7  /usr/bin/pwsh (https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux).
 - NSIS.
 - mkisofs.
