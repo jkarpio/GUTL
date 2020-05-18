@@ -16,7 +16,6 @@ Ejemplo de app multiplatarforma usando mono y gtk.
 
 ## Como empezar?
 
-- escribir el como empezar
 
 
 ### Tags & Technologies
