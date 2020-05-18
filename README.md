@@ -24,3 +24,4 @@ Ejemplo de app multiplatarforma usando mono y gtk.
 
 ## Lincense
 
+MIT
