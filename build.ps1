@@ -1,5 +1,6 @@
 #!/usr/bin/pwsh
 
+#region INIT
 function Invoke-Sudo { 
     & /usr/bin/env sudo pwsh -command "& $args" 
 }
@@ -16,18 +17,22 @@ New-Item  $OUTPUTDIR -ItemType Directory -Force
 
 Set-Location $PSScriptRoot 
 
-#BUILD
+#endregion
+
+#region MSBUILD BUILD
 
 Invoke-Expression  "msbuild ./GUTL/GUT.sln /nologo /t:build /p:Configuration=Release"
 Remove-Item  $PSScriptRoot/GUTL/bin/Release/*.pdb 
+#endregion
 
-#WINDOWS
+#region WINDOWS
 
 $FILENAME = "GUTL"
 Invoke-Expression "makensis -DPRODUCT_VERSION='$BUILD_VERSION' -DPRODUCT_FILENAME='$FILENAME' -DPRODUCT_BRAND='' -DOUTPUT_DIR='$OUTPUTDIR' $FILENAME.nsi"
 
+#endregion
 
-#DEBIAN
+#region DEBIAN
 
 $DEBIAN_PATH = "DebianPackage/gutl/debian/gutl/usr/lib/GUTL/"
 
@@ -45,8 +50,9 @@ Invoke-Sudo "sed 's/GUTL_VERSION/$BUILD_VERSION/' control.sed > debian/gutl/DEBI
 Invoke-Sudo dh_md5sums
 Invoke-Sudo dh_fixperms
 Invoke-Sudo "dh_builddeb --destdir=$OUTPUTDIR"
+#endregion 
 
-### MacOSX
+#region MacOSX
 
 Set-Location $PSScriptRoot 
     
@@ -63,6 +69,6 @@ Invoke-Expression "mkisofs -J -R -apple -v -part -z -V GUTL -o $OUTPUT_FILENAME 
 
 Set-Location $PSScriptRoot 
 
+#endregion
 
-###
 

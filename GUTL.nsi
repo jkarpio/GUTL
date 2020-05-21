@@ -28,7 +28,7 @@
     !endif
 
     !ifndef PRODUCT_WEB_SITE
-    !define PRODUCT_WEB_SITE "http://t.me/AxisPOS"
+    !define PRODUCT_WEB_SITE "http://t.me/s/AxisPOS"
     !endif
 
     
@@ -150,10 +150,10 @@
 
 ;--------------------------------
 ;Installer Sections
+;--------------------------------
+
 SectionGroup  "!Work Station" WorkStation
     InstType "Full workstation"
-    ;InstType "Full workstation withouy MySQL"
-    ;InstType "MySQL Server only"
 
       Section "!${PRODUCT_NAME}" SecWorkStation
         SectionIn 1 2

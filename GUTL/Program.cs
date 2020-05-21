@@ -22,15 +22,11 @@
             Application.Run ();
         }
  
- 
-        // runs when the user deletes the window using the "close
-        // window" widget in the window frame.
         static void delete_event (object obj, DeleteEventArgs args)
         {
             Application.Quit ();
         }
  
-        // runs when the button is clicked.
         static void hello (object obj, EventArgs args)
         {
             Console.WriteLine("Hello World");
